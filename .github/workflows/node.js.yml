@@ -16,11 +16,5 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: 12.x
-    - name: Install chrome
-      run: |
-        sudo apt-get update 
-        sudo apt-get install google-chrome-stable
-    - name: Install Package 
-      run: npm install
-    - name: Run test 
-      run: npm run test
+    - name: Install chrome, package and run test
+    - uses: ./.github/actions/sample-action.yml
