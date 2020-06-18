@@ -1,3 +1,4 @@
+name: Install chrome package and run test   
     - name: Install chrome
       run: |
         sudo apt-get update 
