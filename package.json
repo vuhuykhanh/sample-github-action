@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx ./node_modules/.bin/wdio wdio.conf.js"
+    "test": "wdio wdio.conf.js"
   },
   "keywords": [],
   "author": "",
