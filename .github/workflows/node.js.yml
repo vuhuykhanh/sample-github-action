@@ -17,4 +17,4 @@ jobs:
       with:
         node-version: 12.x
     - name: Install chrome, package and run test
-    - uses: ./.github/actions/sample-action.yml
+    - uses: ./.github/actions/
