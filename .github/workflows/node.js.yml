@@ -40,7 +40,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Repository Dispatch
-        uses: peter-evans/repository-dispatch@v1
+        uses: mvasigh/dispatch-action@main
         with:
           token: ${{ secrets.MLEM }}
           repository: ${{ matrix.repo }}
