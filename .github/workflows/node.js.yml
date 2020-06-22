@@ -34,6 +34,6 @@ jobs:
       uses: peter-evans/repository-dispatch@v1
       with:
         token: ${{ secrets.MLEM }}
-        repository: vuhuykhanh/sample-github-action-2
+        repository: vuhuykhanh/sample-github-action-2@master
         event-type: auto-test
   
