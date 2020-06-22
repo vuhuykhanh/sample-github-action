@@ -14,10 +14,25 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: 12.x
+    - name: Install chrome, package and run test
+      run: |
+        sudo apt-get update 
+        sudo apt-get install google-chrome-stable
+    - name: Install Package 
+      run: npm install
+    - name: Run test 
+      run: npm run test
+    - name: Hello world action step
+      id: hello
+      uses: actions/hello-world-docker-action@v1
+      with:
+        who-to-greet: 'Mona the Octocat'
+    # Use the output from the `hello` step
+    - name: Get the output time
+      run: echo "The time was ${{ steps.hello.outputs.time }}"
     - name: Repository Dispatch
       uses: peter-evans/repository-dispatch@v1
       with:
         token: ${{ secrets.MLEM }}
-        repository: vuhuykhanh/simple-github-action-2
-        event-type: auto-test
-  
+        repository: vuhuykhanh/sample-github-action-2
+        event-type: my-event
