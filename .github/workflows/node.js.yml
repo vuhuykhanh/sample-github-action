@@ -38,7 +38,7 @@ jobs:
       uses: ./.github/actions/action-a
       with:
         who-to-greet: 'Anna'
-        time: steps.outputs.hello.time
+        time: '${{steps.outputs.hello.time}}'
     # Trigger another repository
     - name: Repository Dispatch
       uses: peter-evans/repository-dispatch@v1
