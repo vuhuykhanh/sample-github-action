@@ -26,10 +26,17 @@ jobs:
       id: hello
       uses: actions/hello-world-docker-action@v1
       with:
-        who-to-greet: 'Mona the Octocat'
+        who-to-greet: 'Khanh Vu'
     # Use the output from the `hello` step
     - name: Get the output time
       run: echo "The time was ${{ steps.hello.outputs.time }}"
+    # Use action-a folder
+    - name: Get the name in action folder
+      id: john
+      uses: ./.github/actions/action-a
+      with:
+        who-to-greet: john
+    # Trigger another repository
     - name: Repository Dispatch
       uses: peter-evans/repository-dispatch@v1
       with:
