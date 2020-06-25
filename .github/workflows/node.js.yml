@@ -43,4 +43,3 @@ jobs:
         token: ${{ secrets.MLEM }}
         repository: vuhuykhanh/sample-github-action-2
         event-type: my-event
-  
