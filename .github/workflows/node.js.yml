@@ -31,7 +31,7 @@ jobs:
     # - name: Get the output time
     #   run: echo "The time was ${{ steps.hello.outputs.time }}"
     # Use action-a folder
-      - name: Checkout
+    steps:
       uses: actions/checkout@v2
       id: john
       - name: Get the name in action folder
