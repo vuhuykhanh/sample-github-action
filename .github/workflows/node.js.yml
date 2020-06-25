@@ -43,8 +43,8 @@ jobs:
     - name: Repository Dispatch
       uses: peter-evans/repository-dispatch@v1
       with:
-        token: $Mlem
+        token: $GITHUB_TOKEN
         repository: vuhuykhanh/sample-github-action-2
         event-type: my-event
 env:
- Mlem: ${{secrets.MLEM}}
+ GITHUB_TOKEN: ${{secrets.MLEM}}
