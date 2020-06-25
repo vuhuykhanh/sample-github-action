@@ -14,19 +14,23 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: 12.x
+    #Install chrome
     - name: Install chrome, package and run test
       run: |
         sudo apt-get update 
         sudo apt-get install google-chrome-stable
+    #Install package in package.json
     - name: Install Package 
       run: npm install
+    #Run test
     - name: Run test 
       run: npm run test
+    #Using actions that published in Marketplace
     - name: Hello world action step
       id: hello
       uses: actions/hello-world-docker-action@v1
       with:
-        who-to-greet: $JOHN
+        who-to-greet: $JOHN1
     # Use the output from the `hello` step
     - name: Get the output time
       run: echo "The time was ${{ steps.hello.outputs.time }}"
