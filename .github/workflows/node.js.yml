@@ -26,7 +26,7 @@ jobs:
       id: hello
       uses: actions/hello-world-docker-action@v1
       with:
-        who-to-greet: 'Khanh Vu'
+        who-to-greet: 'Khanh Vu and $JOHNCENA'
     # Use the output from the `hello` step
     - name: Get the output time
       run: echo "The time was ${{ steps.hello.outputs.time }}"
@@ -43,6 +43,9 @@ jobs:
     - name: Repository Dispatch
       uses: peter-evans/repository-dispatch@v1
       with:
-        token: ${{ secrets.MLEM }}
+        token: $MLEM
         repository: vuhuykhanh/sample-github-action-2
         event-type: my-event
+    env:
+      MLEM: ${{secrets.MLEM}}
+      JohnCena: "JohnCena"
