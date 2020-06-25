@@ -31,6 +31,8 @@ jobs:
     - name: Get the output time
       run: echo "The time was ${{ steps.hello.outputs.time }}"
     # Use action-a folder
+    - name: Install @actions/core and @actions/github
+      run: npm install @actions/core @actions/github
     - name: Get the name in action folder
       id: john
       uses: ./.github/actions/action-a
