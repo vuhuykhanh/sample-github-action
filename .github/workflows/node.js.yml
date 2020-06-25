@@ -33,7 +33,7 @@ jobs:
     # Use action-a folder
     - name: Get the name in action folder
       id: john
-      uses: ./.github/actions/action-a
+      uses: ./.github/actions/action-a@v1
       with:
         who-to-greet: john
     # Trigger another repository
